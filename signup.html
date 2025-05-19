@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Signup page</h1>
+<form method="post">
+    {% csrf_token %}
+    Username: <input type="text" name="un" placeholder="enter here..." required>
+    <br><br>
+    Phone: <input type="number" name="ph" required>
+    <br><br>
+    <input type="submit" value="Register">
+</form>
+<h1> Check ur sms for password</h1>
+{{ msg }}
+{% endblock %}

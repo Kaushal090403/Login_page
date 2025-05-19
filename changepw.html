@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Change password page</h1>
+<form method="post">
+    {% csrf_token %}
+    Username: <input type="text" name="un" placeholder="enter username..." required>
+    <br><br>
+    Password: <input type="password" name="pw1" placeholder="enter here..." required>
+    <br><br>
+    Repeat Password: <input type="password" name="pw2" placeholder="repeat here..." required>
+    <br><br>
+    <input type="submit" value="Change password">
+</form>
+{{ msg }}
+{% endblock %}

@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>Request New Password</h1>
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <label for="un">Username:</label>
+    <input type="text" id="un" name="un" required>
+    <br><br>
+    <button type="submit">Request New Password</button>
+</form>
+    {{ msg }}
+    {% endblock %}
